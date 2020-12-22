@@ -1,0 +1,130 @@
+.block__title__descr
+    font(RR, #707070)
+    width 50%
+    text-align center
+    margin-top 20px
+    +adapt(1400px)
+        width 80%
+    +adapt(768px)
+        width 100%
+.dbd20-tabs
+    display flex
+    justify-content space-around
+    align-items center
+    border-bottom 2px solid #888888
+    min-height 80px
+    height auto
+    // margin-top 40px
+    +adapt(992px)
+        flex-direction column
+        justify-content center
+.dbd20-tabs__index
+    width 100%
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    +adapt(680px)
+        justify-content center
+    +adapt(352px)
+        justify-content space-around
+.dbd20-tabs__options
+    width 100%
+    display flex
+    justify-content flex-end
+    align-items center
+    margin-top 40px
+    +adapt(380px)
+        flex-direction column
+        justify-content center
+        margin 15px 0 20px 0
+    // +adapt(1200px)
+    //     width 50% 
+    // +adapt(992px)
+    //     order 1
+    //     width 100%
+    //     justify-content center
+.dbd20-tabs__index-item
+    font(RB,#A1A1A1, 32px)
+    cursor pointer
+    margin-right 30px
+    tran()
+    +adapt(1200px)
+        font-size 26px
+        margin-right 15px
+    +adapt(820px)
+        font-size 22px
+    +adapt(368px)
+        margin-right 10px
+
+.dbd20-tabs__index-item_active
+    color red
+.dbd20-tabs__options-btn
+    .button__textual-programm__link
+        border-right 1px solid #eff3f6
+        border-left 1px solid #eff3f6
+        margin-right 10px
+        font(RR, dark, 18px)
+        width 230px
+        height 40px
+        display flex
+        align-items center
+        justify-content center
+        position relative
+        +adapt(405px)
+            width 180px
+            font-size 16px
+        &:before,
+        &:after 
+            box-sizing: inherit;
+            content: '';
+            position: absolute;
+            border: 2px solid transparent;
+            width: 0;
+            height: 0;
+            
+        &::before 
+            top: 0;
+            left: 0;
+        &::after 
+            bottom: 0
+            right: 0
+        &:hover 
+            color: red
+            &::before,
+            &::after 
+                width: 100%;
+                height: 100%;
+                
+
+            &::before 
+                border-top-color: red // Make borders visible
+                border-right-color: red
+                transition:
+                width 0.25s ease-out, // Width expands first
+                height 0.25s ease-out 0.25s; // And then height
+            
+
+            &::after 
+                border-bottom-color: #EE2852; // Make borders visible
+                border-left-color: #EE2852;
+                transition:
+                border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+                width 0.25s ease-out 0.5s, // And then exanding width
+                height 0.25s ease-out 0.75s; // And finally height
+
+.dbd20-section__in
+    .news-inside__back
+        margin-top 50px
+.program-section    
+    .container
+        +adapt(320px)
+            min-width auto !important
+
+.dbd20-tabs__options-social
+    display block
+    width 120px
+    margin 0
+.ya-share2__container_size_m
+    display block
+    width 120px
+    margin 0

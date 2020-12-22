@@ -1,0 +1,147 @@
+.news-inside__right
+    h1,h2,h3
+        width 100%
+        font(RB, dark, 16px)
+        text-transform uppercase
+        margin-top 16px
+    p,div
+        width 100%
+        font(RR, dark, 16px)
+        margin 16px 0 0 0
+    img
+        width 100%
+        display block
+        width 100%
+        height auto
+.news-inside
+    border-bottom 1px solid gray
+    padding-bottom 20px
+    margin-bottom 60px
+.news-inside__wr
+    margin 0 auto
+    height auto
+    display flex
+    justify-content space-between
+    align-items center
+    +adapt(860px)
+        flex-direction column
+.block__title 
+    margin 30px 0
+    width calk(100%-500px)
+    +adapt(860px)
+        width 100%
+        margin-top 20px
+        order 3
+.sity2020-share
+    width 120px
+    text-align right
+    +adapt(860px)
+        text-align center
+        order 2
+        // margin-top 20px
+.news-inside__back
+    width 250px
+    text-align left
+    +adapt(860px)
+        text-align center
+        margin 20px 0
+        order 1
+.news-inside__back__button
+    color dark
+    cursor pointer
+    display flex
+    justify-content start
+    align-items center
+    img
+        width 40%
+        transition .4s ease-out
+    &:hover
+        img
+            transform translateX(-10px)
+    +adapt(860px)
+        justify-content center
+
+.news-inside__back-txt
+    font(RR, dark, 16px)
+    margin-left 10px
+
+.news-inside__news-wr
+    display flex
+    justify-content space-around
+    // align-items center
+    margin-bottom 50px
+    +adapt(900px)
+        margin 20px 0 50px 0
+        flex-direction column
+.news-inside__left,
+    width 40%
+    margin-bottom auto
+    +adapt(1200px)
+        width 40%
+.news-inside__right__date
+    font(RR, dark, 16px)
+    
+.news-inside__left__img
+    display block
+    max-width 100%
+
+.news-inside__right
+    width 60%
+    margin-bottom auto
+    margin-left 20px
+    +adapt(900px)
+        width 90%
+
+.news__item
+    display block
+    cursor pointer
+    overflow hidden
+
+    // width 33%!important
+.news-inside__slider
+    width 100%
+    overflow hidden
+    margin-top 40px
+    padding-left 9px
+    +adapt(700px)
+        margin-top 20px
+.swiper-news__button-wr
+    width 100%
+    height 60px
+    display flex
+    // +adapt(520px)
+    //     align-items center
+    //     justify-content center
+    //     flex-direction column
+.swiper-news-button-next,
+.swiper-news-button-prev
+    width 50%
+    flex()
+    cursor pointer
+    img
+        tran()
+.swiper-news-button-next
+    border-right 1px solid gray
+    &:hover
+        img
+            transform translateX(-10px)
+    .swiper-news-inside__back-txt
+        margin-left 20px
+        +adapt(520px)
+            display none
+.swiper-news-button-prev
+    &:hover
+        img
+            transform translateX(10px)
+    .swiper-news-inside__back-txt
+        margin-right 20px
+        +adapt(520px)
+            display none
+.swiper-news-inside__back-txt
+    font()
+.news-another
+    margin-top 30px
+
+.swiper-container2
+    .news-inside__slider__list
+        margin 1px 0 0 1px !important

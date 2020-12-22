@@ -1,0 +1,26 @@
+include ../data/data.pug
+
+  mixin menu(item)
+    li.header__nav__item
+      a(href=`${item.href}`).header__nav__link=item.item
+
+  mixin crew(item)
+    .contacts__crew-item
+      .contacts__crew-item-wr
+        .contacts__crew__img-wr
+          img.contacts__crew__img(src=`${item.src}`, alt="")
+        .contacts__crew__name !{item.name}
+        .contacts__crew__position !{item.position}
+        a.contacts__crew__email(href=`mailto:${item.email}`) !{item.email}
+        
+  //- mixin partners-block(item)
+  //-   .partners__title=item.item
+
+
+
+
+      //- mixin partners(item)
+  //-   .partners__item
+//-       .partners__item__logo-wr
+//-         .partners__item__logo
+//-           img.partners__logo(src=`${item.src}`, alt="")

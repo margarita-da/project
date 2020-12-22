@@ -1,0 +1,106 @@
+.popup
+    width 100%
+    // min-height 100%
+    height 100%
+    // height 
+    position fixed
+    top 0
+    left 0
+    background rgba(0,0,0,0.8)
+    z-index 200
+    overflow auto
+#popup-pr
+    display none
+.popup-pr
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    width 770px
+    height 100vh
+    overflow auto
+    +adapt(768px)
+        width 100%
+.popup-pr__window
+    width 100%
+    border 1px solid #E1E1E1
+    background white
+    padding 30px
+.popup-pr__title-space
+    font(RB,green,16px)
+    border-bottom 1px solid #E1E1E1
+    margin-top 30px
+    padding-bottom 20px
+    position relative
+.popup-pr__title-space__close
+    position absolute
+    display block
+    width 25px
+    height 25px
+    top -30px
+    right 10px
+    img
+        display block
+        width 100%
+.popup-pr__list
+    .tags__content__item
+        flex-wrap wrap
+    .tags__content__date
+        order 1
+        width 50%
+        padding-bottom 20px
+    .tags__content__wishlist  
+        order 2
+        width 50%
+    .tags__content__info
+        order 3
+        width 100%
+        border-top 1px solid #E1E1E1
+        padding-top 20px
+    .tags__content__info__descr 
+        +adapt(460px)
+            width 100%
+            margin-right 0
+.popup-pr__speakers-title
+    font(RB,dark,18px)
+    // margin-bottom 10px
+.popup-pr__speakers-name
+    margin-top 15px
+    font(RB,green,16px)
+.popup-pr__speakers-position
+    display flex
+    justify-content flex-start
+    align-items center
+    margin 6px 0
+    +adapt(430px)
+        flex-direction column
+        align-items flex-start
+.popup-pr__speakers-position-left
+    font(RR,dark,12px)
+.popup-pr__speakers-position-right
+    font(RB,red,12px)
+    margin-left 5px
+    +adapt(430px)
+        margin 0
+
+.popup-pr__speakers-position-st
+    font(RB,dark,12px)
+.popup-pr__all
+    display inline-flex
+    cursor pointer
+    margin-top 20px
+    border-bottom 2px solid dark
+    &:hover
+        border-bottom 2px solid red
+        .popup-pr__all-txt
+            color red
+        .popup-pr__all-img
+            transform translate3d(5px,5px,5px)
+
+
+.popup-pr__all-txt
+    margin-right 10px
+    font(RB, dark, 18px)
+    tran()
+.popup-pr__all-img
+    tran()

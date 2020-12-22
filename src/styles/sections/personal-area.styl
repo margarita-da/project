@@ -1,0 +1,179 @@
+.news-inside__back__down
+    margin 50px 0 100px 0
+
+.personal-area-wr
+    width 100%
+    text-align center
+    position relative
+    display flex
+    justify-content center
+    align-items start
+    margin-top 30px
+    border-bottom 1px solid #EFF3F6
+    .news-inside__back
+        +adapt(1250px)
+            margin-bottom 40px
+    +adapt(1250px)
+        flex-direction column
+        align-items center
+
+
+.personal-area__description-title
+    font(RR, red, 16px)
+
+.personal-area__description-txt
+    width 770px
+    font(RR, dark, 16px)
+    padding-bottom 20px
+    +adapt(1250px)
+        width 100%
+        padding-bottom 10px
+.links__personal-area
+    padding-bottom 40px
+    display flex
+    justify-content space-between
+    align-items center
+    +adapt(720px)
+        flex-direction column
+.personal-area__more__txt
+    font(FB,black ,21px)
+    margin-right 10px
+    tran()
+.personal-area__more
+    border none
+    text-decoration underline
+    text-decoration-color black
+    display inline-flex
+    cursor pointer
+    margin-top 20px
+    &:hover
+        .personal-area__more__txt
+            color red
+        .personal-area__more__pic
+            transform translate3d(5px,5px,5px)
+        
+.personal-area__more__pic
+    tran()
+    margin-right 30px
+    +adapt(720px)
+        margin 0
+.personal-area__name
+    font(RB, dark, 22px)
+    width 230px
+    +adapt(680px)
+        padding-bottom 20px
+
+.personal-area__program-list
+    width 660px
+    margin 0 auto
+    +adapt(800px)
+        width 100%
+    a
+        cursor default !important    
+.personal-area__program-item
+    position relative
+    margin-top 40px
+    display flex
+    justify-content space-between
+    align-items center
+    border-bottom 1px solid #EFF3F6
+    +adapt(700px)
+        margin-top 10px
+        flex-wrap wrap
+
+
+.personal-area__program__time
+    width 100px
+    font(RB, dark, 24px)
+    text-align left
+    +adapt(700px)
+       font-size 18px
+       order 1
+       width 50%
+       text-align left
+
+.personal-area__program__del-wr,
+.personal-area__program__link
+    text-align left
+    color green
+    margin 0 0 25px 60px
+
+.personal-area__program__place
+    font(RB, green, 16px)
+
+.personal-area__program__del-wr
+    cursor pointer !important
+    width 22px
+    +adapt(700px)
+        order 2
+        width 50%
+        margin 0 0
+        text-align right
+
+.personal-area__program__link
+    width calc(100% - 122px) !important
+    +adapt(700px)
+        order 3
+        width 100% !important
+        margin 0 
+        text-align center
+
+.personal-area__program__title
+    font(RB, green, 24px)
+    margin-top 20px
+    +adapt(700px)
+        margin-top 10px
+        font-size 20px
+
+.personal-area__program__descr
+    font(RR, green, 24px)
+.personal-area__program__del
+    cursor pointer
+    margin-bottom auto
+    
+.personal-area__program__del-img
+    cursor pointer
+    width 22px
+    height 22px
+    use
+        fill gray
+        &:hover
+            fill red
+.del-inimate
+    animation opacity-inimate 2s ease
+    &:after
+        content ''
+        animation del-inimate 2s ease
+        position absolute
+        width 0
+        right 0
+        height 100%
+        z-index -10
+        border-top-left-radius 50%
+        border-bottom-left-radius 50%
+.wishlist-error
+    font(RB, red, 20px)
+    text-align center
+@keyframes opacity-inimate
+    0%
+        opacity 1
+    80%
+        opacity 1
+    100%
+        opacity 0
+@keyframes del-inimate
+    0%
+        background-color red
+        opacity 0
+        width 0
+        border-top-left-radius 50%
+        border-bottom-left-radius 50%
+    50%
+        border-top-left-radius 50%
+        border-bottom-left-radius 50%
+    100%
+        background-color red
+        opacity 0.8
+        width 100%
+        border-top-left-radius 0
+        border-bottom-left-radius 0

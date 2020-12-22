@@ -1,0 +1,57 @@
+extends ../template
+
+block variables
+    - var title = "Спикеры"
+
+block content
+    include ../includes/header.pug
+    .container
+        .news-wr.speackers-container
+            .news-inside__back
+                a.news-inside__back__button(href="index.html")
+                    img(src="assets/images/news-inside/arrowback.png", alt="back")
+                    span.news-inside__back-txt На главную
+            .sity2020-share
+                .sity2020-share__btns.ya-share2(data-services="vkontakte,facebook,telegram" data-counter="")
+    
+        .block__title.block-title-news
+            .h2__title Спикеры    
+    section.dbd20-section.dbd20-section_blue(id="dbd20-speakers")
+        .dbd20-section__in.dbd20-section__in_full-width
+            .dbd20-speakers
+                -for (let i=0; i<30; i++){
+                    .dbd20-speakers__item
+                        .dbd20-speakers__card
+                            img.dbd20-speakers__photo(src="assets/images/speakers/DSC_9824-2.jpg" alt="")
+                            .dbd20-speakers__who
+                                .dbd20-speakers__name Михаил Райбман
+                                .dbd20-speakers__company Mediascope
+                                .dbd20-speakers__position Заместитель генерального директора по развитию бизнеса Mediascope
+                -}
+                    
+                    //- .dbd20-speakers__item
+                    //-     .dbd20-speakers__card.dbd20-speakers__card_program-notfull.dbd20-program-notfull
+                    //-         .dbd20-program-notfull__logo
+                    //-             img (src="img/logo-single.png" alt="")
+                    //-         .dbd20-program-notfull__text Программа дополняется
+                            //- <div class="dbd20-program-notfull__text">
+                            //-     Программа сформирована.
+                            //-     <br>Информация обновляется.
+                            //- </div>
+
+            .dbd20-speakers-load-more
+                button.button.button__dark.dbd20-speakers-load-more__btn Все спикеры
+                    span 
+    .container
+        .news-inside__back.news-inside__back-down
+            a.news-inside__back__button(href="index.html")
+                img(src="assets/images/news-inside/arrowback.png", alt="back")
+                span.news-inside__back-txt На главную
+    
+    include ../common/btnUp.pug
+    include ../common/popup-reg.pug
+    include ../common/right-menu.pug
+    include ../common/result-form.pug
+    include ../common/act__popup.pug
+
+    script(src="//yastatic.net/share2/share.js")

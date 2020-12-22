@@ -1,0 +1,86 @@
+section.section.section__recommendations
+    .container
+        .block__title.block-title-news
+            .h2__title Рекомендуемое
+        .recommendations
+            include ../common/recommendation.pug
+            .recommendations__tags
+                -
+                    let tags =[
+                        {
+                            tagSearch:[
+                                'adindex, petr',
+                                //- 'petr',
+                                //- 'petr',
+                                //- 'petr',
+                                //- 'petr',
+                                'adindex',
+                                'cinema',
+                                //- 'cinema, adindex, petr, work',
+                                'cinema, adindex',
+                                //- 'cinema, adindex, petr',
+                                'work',
+                                'work',
+                                'work',
+                                'work',
+                                'work, petr',
+                                'work, adindex',
+                                'work, cinema',
+                                //- 'adindex, petr',
+                                //- 'petr',
+                                //- 'petr',
+                                //- 'petr',
+                                //- 'petr',
+                                'adindex',
+                                'cinema',
+                                //- 'cinema, adindex, petr, work',
+                                'cinema, adindex',
+                                //- 'cinema, adindex, petr',
+                                'work',
+                                'work',
+                                'work',
+                                'work',
+                                //- 'work, petr',
+                                'work, adindex',
+                                'work, cinema'
+                            ],
+                            tag:[
+                                'work',
+                                'adindex',
+                                'petr',
+                                'cinema',
+                                
+                            ]
+                        }
+                    ]
+                .tags-wr
+                    for items in tags
+                        for tag in items.tag
+                            a(data-sort=`${tag}` href="#").tags__link  !{tag}
+                   
+                .tags__content
+                    .tags__content__list
+                        .lds-ripple
+                            div
+                            div
+                        for tagSearch in tags
+                            for items, i in tagSearch.tagSearch
+                                .content.popup-js(data-sort=`${items}` data-id=`${i}`)
+                                    .tags__content__item
+                                        .tags__content__date
+                                            .tags__content__date-txt 1!{i}:20
+                                        a(href="#popup-pr" ).tags__content__info
+                                            .tags__content__info__hall ЗАЛ !{i}  |  ROCKFELLER’S HALL  |  LOFT !{items}
+                                            .tags__content__info__section Пленарное заседание 
+                                            .tags__content__info__title Рекламный рынок сегодня: аналитика и прогнозы
+                                            .tags__content__info__descr Топ-менеджеры и ведущие специалисты рекламного, исследовательского и IT-секторов расскажут о текущем состоянии рынка и поделятся своими прогнозами развития индустрии, обсудят основные драйверы и стопперы отрасли сегодня. АКАР представит объемы рекламы в средствах ее распространения в I квартале 2019 года. Также вас ждут экспертные оценки и прогнозы в различных секторах рекламы и маркетинга.
+
+                                        .tags__content__wishlist
+                                            a(href="#" data-id=`${i}`).recommendations__second__data__wishlist.wishlist
+                                                svg.recommendations__second__star-img
+                                                    use(xlink:href="assets/sprite/sprite.svg#star")
+                        
+                    .tags__content__buttons
+                        button.button.button__white.tags__content__btn#loadMore Показать еще
+                        a(href="programm.html").button.button__dark.tags__content__link Вся программа
+                            span

@@ -1,0 +1,50 @@
+// .container__news
+//     display flex
+
+.news-wr
+    width 100%
+    display flex
+    position relative
+    justify-content space-between
+    align-items center
+    +adapt(780px)
+        flex-direction column
+        align-items center
+.news__list-wr
+    margin 50px 0
+    .news-inside__back
+        margin-top 50px
+
+.news__list
+    display flex
+    flex-wrap wrap
+    margin 1px 0 0 1px
+
+
+.news__title
+    width 100%
+    font(RB, dark, 16px)
+    text-transform uppercase
+
+.news__description
+    width 100%
+    font(RR, dark, 16px)
+    margin-top 20px
+
+.news__item
+    width 33%
+    min-height 291px
+    height auto
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    margin -1px 0 0 -1px
+    padding 50px 50px
+    border 1px solid gray
+    +adapt(1200px)
+        width 50%
+        padding 40px 40px
+    +adapt(700px)
+        padding 30px 30px
+        width 100%

@@ -1,0 +1,33 @@
+//- include ../utils/mixins.pug
+-
+     var PartnersList = [
+       "Официальные",
+       "Специальные",
+       "При поддержке",
+       "Индустриальные партнеры"
+    ];
+section.section.section__partners#partners
+    .container
+        .privacy-policy
+            a.privacy-policy__link(href="#") Положение о конференции ADINDEX CITY CONFERENCE 2020
+        .news-wr.center
+            .block__title.block-title-news
+                .h2__title Партнеры
+        .partners__wrapper
+            //- for item in PartnersList
+            //-     +partners-block(item)
+            //- 
+            -for (let i=0; i<PartnersList.length;i++){
+                .partners__title=PartnersList[i]
+                .partners__list
+                    - for (let i=0; i<4; i++) {
+                        a.partners__item__logo-wr(href="#")
+                            img.partners__logo(src="assets/images/partners/logo1.png", alt="")
+                    -}
+                .partners__list-sub
+                    - for (let a=0; a<2; a++) {
+                        a.partners__item__logo-wr-special(href="#")
+                            img.partners__logo(src="assets/images/partners/logo1.png", alt="")
+                    -}
+                
+            -}

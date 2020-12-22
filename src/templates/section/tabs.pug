@@ -1,0 +1,30 @@
+section.section.section__tabs
+  .block__title.contacts__title
+    .h2__title События
+  .tabs__nav 
+    .tabs__nav-list
+      .tabs__nav-item.js-active Событие 1
+      .tabs__nav-item ADINDEX SIMPLE PARTY
+      .tabs__nav-item ADINDEX SIMPLE PARTY
+      .tabs__nav-item ADINDEX SIMPLE PARTY
+      .tabs__nav-item ADINDEX SIMPLE PARTY
+      .tabs__nav-item СоADINDEX SIMPLE PARTY
+    
+    .tabs__panels 
+      .container-panels 
+        -for(var i=1; i<7; i++){   
+          .tabs__panel(style="background-image: url(assets/images/tabs/img1.png);")
+            .tabs__panel-content
+              .tabs__panel-content__left
+                .block-title.block-title__tabs
+                  .h2__title ADINDEX SIMPLE PARTY !{i} 
+                .tabs__panel-content__descr В рекламном городе можно окунуться не только в атмосферу новых знаний и опыта. По сложившейся традиции вечером пройдет вечеринка в стиле Old Money Party, а именно, церемония вручения профессиональной премии в области медиазакупок — AdIndex Media Awards, где состоится награждение лидеров индустрии медиазакупок. На церемонии будут названы победители ежегодного рейтинга крупнейших медиабаинговых агентств, составляемого AdIndex уже 11 раз.
+                  .tabs__panel-content__item
+                    .tabs__panel-content__time 19:00
+                    .tabs__panel-content__txt Начало
+                  .tabs__panel-content__item
+                    .tabs__panel-content__time 23:00
+                    .tabs__panel-content__txt Конец
+                a.tabs__panel__link(href="#") Подробнее
+             
+          -}

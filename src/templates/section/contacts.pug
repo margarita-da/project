@@ -1,0 +1,15 @@
+include ../utils/mixins.pug
+section.section#contacts
+    .container
+        .block__title.contacts__title
+            .h2__title Контакты
+    .container__contacts        
+        .contacts__crew-list
+            for item in crewList
+                +crew(item)
+        .contacts__info
+            .contacts__info__list
+                .contacts__info__item
+                    a.contacts__info__link(href="tel:+7(495)737-08-45") +7(495)737-08-45
+                .contacts__info__item
+                    a.contacts__info__link(href="mailto:info@adindex.ru") info@adindex.ru

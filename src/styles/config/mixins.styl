@@ -1,0 +1,41 @@
+adapt(num) 
+   @media screen and (max-width: num)
+        {block}
+
+adaptmin(num) 
+   @media screen and (min-width: num)
+        {block}
+
+
+font(f=RR,c=dark,s=false)
+    font-family f
+    if s 
+        font-size s
+    else 
+        font-size 16px
+    color c
+tran(property=all, time=.3s, anim=ease)
+    transition property anim time
+    
+absolute()
+    position: absolute
+    overflow: hidden
+    width: 100%
+    height: 100%
+    
+    display: flex
+    align-items: center
+    justify-content: center
+
+positionAbsolute(top= null, left=null, right=null, bottom=null) 
+    position: absolute;
+    top: top;
+    left: left;
+    right: right;
+    bottom: bottom;
+flex(y=true, x=true)
+    display flex
+    if y
+        align-items center
+    if x
+        justify-content center

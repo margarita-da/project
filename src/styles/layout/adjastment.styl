@@ -1,0 +1,170 @@
+.wrapper 
+    width 100%
+    min-height 600px
+    height 100%
+    position relative
+
+.maincontent 
+    width 100%
+    height 100%
+    position relative
+
+.section 
+    width 100%
+    height auto
+    position relative
+.container 
+    margin 0 auto
+    max-width: 1920px
+    padding-left 32px
+    padding-right 32px 
+    +adapt(1200px)
+        max-width: 992px
+        width 100% 
+        
+    +adapt(992px)
+        max-width: 992px
+        width 100% 
+        
+    +adapt(768px)
+        max-width: 768px
+        width 100% 
+        padding-left 16px
+        padding-right 16px
+    +adapt(480px)
+        max-width: 480px
+        width 100% 
+    +adapt(320px)
+        min-width 320px
+        
+.block__title
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+.h1__title
+    // font(Rb, 32px)
+.h2__title
+    font(RB, green, 48px)
+    line-height 1.4
+    text-align center
+
+    +adapt(1400px)
+        font-size 40px
+    +adapt(1200px)
+        font-size 36px
+    +adapt(700px)
+        font-size 30px
+.minu__title
+    font(RR, gray, 16px)
+    border-bottom 1px solid dark
+    padding-bottom: 16px
+
+.button
+    display block
+    cursor pointer
+    background-color green !important
+    border 1px solid black
+    overflow: hidden;
+    position: relative;
+    tran()
+    &:before,
+    &:after 
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        border-radius: 50%;
+        z-index: -1;
+    &:before 
+        transform: translate(-50%, -50%);
+        left: -20px;
+  
+    &:after 
+        transform: translate(50%, -50%);
+        right: -20px;
+     &:hover 
+        letter-spacing 2px
+        &:before 
+            animation: move-left .8s both;
+            animation-direction: alternate;
+        &:after 
+            animation: move-right .8s both;
+.button__dark
+    position relative
+    font(RR, white, 18px)
+    background-color green
+    // border none
+    &:hover
+        background-color green !important
+        color dark
+    &:before,
+    &:after 
+        background white
+    span
+        display block
+        position absolute
+        width 100%
+        height 100%
+        top 0
+        left 0
+        z-index: -2
+.button__white
+    background-color green !important
+    font(RR, white, 18px)
+    &:hover 
+        background-color green !important
+        color: dark  
+    &:before,
+    &:after 
+        background: white
+@keyframes move-left {
+  0% {
+    left: -20px;
+  }
+  50% {
+    left: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    left: 50%;
+    height: 400px;
+    width: 400px;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    right: -20px;
+  }
+  50% {
+    right: 50%;
+    width: 20px;
+    height: 20px;
+  }
+  100% {
+    right: 50%;
+    height: 400px;
+    width: 400px;
+  }
+} 
+button
+    border none 
+    outline none 
+    background transparent
+.ya-share2__container_size_m .ya-share2__icon
+    width 30px!important
+    height 30px!important
+    background-size 30px!important
+.ya-share2__badge 
+    display: inline-block;
+
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    tran()
+    &:hover 
+        transform: translateY(-5px)
+    

@@ -1,0 +1,136 @@
+.popup-form
+    position absolute
+    z-index 20
+    top -1500px
+    left 50%
+    transform translateX(-50%)
+    width 360px
+    background-color white
+    padding 30px
+    transition all .4s ease-in-out
+    border 1px solid title
+    box-shadow: -5px 1px 34px -16px rgba(0,0,0,0.75);
+    +adapt(400px)
+      width 100%
+.popup-form-active 
+    top 130px
+    z-index: 20
+.popup-reg__content-info,
+.popup-auth,
+.popup-reg,
+.popup-forgot
+  height 0
+  width 0
+  overflow hidden
+  opacity 0
+  tran(all, .6s)
+
+  // display none
+// .popup-auth
+//   height auto
+//   overflow visible
+  // display: block
+.popup-reg-active
+  tran(width, .7s)
+  height auto
+  width 100%
+  overflow visible
+  opacity 1
+
+  // top 160px
+.popup-reg__content-info__shrt-txt
+    font(RR, dark,18px)
+    margin-bottom 20px
+.popup-reg__content-info__descr
+    font(RR, 16px)
+.descr__color-red
+    color red
+.popup-reg-info__btn 
+    width 300px
+    height 50px
+    margin-top 10px
+    +adapt(480px)
+      width 100%
+@keyframes modalFadeIn {
+  0% {
+    background-color:transparent;
+  }
+  100% {
+    background-color: white;
+  }
+}
+.label
+  display block
+  margin-bottom 10px
+.input
+  width 100%
+  height 45px
+  border 1px solid gray 
+  outline none
+  font(RR,dark,15px)
+  padding-left 20px
+  margin-bottom 5px
+
+
+.form__error
+  padding-left 20px
+  font(RR,red,10px)
+.forgot__link
+  display block
+  margin-top 30px
+  font(RR,#A7A7A7,10px)
+  tran()
+  &:hover
+    color red
+
+.label-confirm
+  display flex
+  justify-content center
+  align-items flex-start
+  margin-left 10px
+  .form__txt
+    margin-top -6px
+    margin-left 10px
+    line-height 1.8
+    font(RR,#707070,12px)
+  a
+    color #5EC1E3
+    text-decoration underline
+  input
+  display none
+  // color #000
+  cursor default
+  line-height 20px
+  padding 10px 0
+  vertical-align middle
+.label-confirm-error
+    .form__txt
+      color red
+  
+  .psevdocheck:before 
+    content " "
+    color white
+    display inline-block
+    position relative
+    text-align center
+    text-indent 0px
+    width 18px
+    height 18px
+    background #5EC1E3
+    border-radius 3px
+    margin -15px 0 0 -14px
+    vertical-align: middle
+
+  input[type=checkbox]:checked+.psevdocheck:before
+    content "\2713"
+
+.dbd20-cta__close-btn
+  position absolute
+  top 13px
+  right 11px
+  border 0
+  padding 0
+  width 24px
+  height 24px
+  background url(../images/close.svg) 50% 50% no-repeat transparent
+  cursor pointer

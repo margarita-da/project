@@ -1,0 +1,129 @@
+.container__contacts
+    width 100%
+    display flex
+    align-items center
+    justify-content center
+    flex-direction column
+    // margin-top: 10px
+
+.contacts__crew-list
+    width 100%
+    padding 0 100px
+    display flex
+    justify-content space-between
+    align-items center
+    margin-top: 20px
+    +adapt(1250px)
+        justify-content space-around
+        flex-wrap wrap
+        align-items center
+        margin-top: 20px
+        padding 0 20px
+    +adapt(700px)
+        margin-top: 30px
+
+
+.contacts__crew-item
+    width 370px
+    margin-right 20px
+    display flex
+    align-items center
+    justify-content center
+    border 1px solid gray
+    tran()
+    &:last-child
+        margin-right 0
+
+    +adapt(1250px)
+        margin-right 0
+        margin-top 10px
+
+    &:hover
+        transform: scale(.97)
+        cursor: pointer
+
+.contacts__crew-item-wr
+    width 100%
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+
+.contacts__crew__img
+    width 100%
+
+.contacts__crew__name
+    font(RB,dark,20px)
+    margin-top 20px
+    +adapt(400px)
+        margin-top 10px
+
+
+.contacts__crew__position
+    font(RR, dark, 16px)
+    margin-top 15px
+    border-bottom 1px solid gray
+    padding-bottom 20px
+    text-align center
+    padding 0 10px
+    +adapt(400px)
+        padding-bottom 10px
+        margin-top 10px
+
+
+.contacts__crew__email
+    font(RR, dark, 16px)
+    margin-top 13px
+    padding-bottom 15px
+
+
+.contacts__info
+    width 100%
+    margin 60px
+    vertical-align middle
+    +adapt(1200px)
+        margin-top 30px
+
+.contacts__info__list
+    width 100%
+    display flex
+    justify-content space-between
+    align-items center
+    border-top 1px solid gray
+    border-bottom 1px solid gray
+    text-align center
+
+.contacts__info__item
+    font(RB, dark, 36px)
+    width 50%
+    height 120px
+    border-right 1px solid gray
+    padding 40px 0
+    line-height 1
+
+    &:last-child
+        border-right none
+    +adapt(1400px)
+        height 60px
+        font-size 24px
+    +adapt(1200px)
+        // height 60px
+        font-size 20px
+    +adapt(700px)
+        font-size 18px
+    +adapt(400px)
+        font-size 14px
+
+.contacts__info__link
+    color dark
+
+.contacts__info__item-ad
+    padding 10px
+    height auto
+    border-left 1px solid #e1e1e1
+.contacts-b
+    border-left none   
+
+
+.contacts__title
+    margin-top 50px !important

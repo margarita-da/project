@@ -1,0 +1,161 @@
+.header
+    height 80px
+    +adapt(620px)
+        height auto
+.header-container
+    display flex
+    align-items center
+    justify-content center
+    height 100%
+    +adapt(620px)
+        flex-direction column
+.header__nav
+    +adapt(1400px)
+        display none
+.header__nav__list
+    display flex
+.header__buttons-wr
+    display flex
+    +adapt(620px)
+        flex-direction column
+.header__nav__item
+    margin-right 40px
+    +adapt(1600px)
+        margin-right 20px
+.header__nav__link
+    display block
+    font(RR, dark, 16px)
+    text-transform uppercase
+    tran()
+    // +adapt(1800px)
+    //     font-size: 15px
+    
+    &:after,
+    &:before 
+        backface-visibility: hidden;
+        border: 1px solid rgba(#EE2852, 0);
+        content: " ";
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        tran()
+        width: 0;
+    &:before
+        top -5px
+    &:after
+        bottom -5px
+    &:hover
+        &:after,
+        &:before 
+            backface-visibility: hidden;
+            border-color:  red
+            width: 100%;
+        
+.header__button__programm
+    border-right 1px solid #eff3f6
+    border-left 1px solid #eff3f6
+    +adapt(620px)
+        margin-top 20px
+.button__programm__link
+    font(RR, dark, 18px)
+    width 230px
+    height 40px
+    display flex
+    align-items center
+    justify-content center
+    position relative
+    &:hover 
+        color: red
+        &::before,
+        &::after 
+            width: 100%;
+            height: 100%;
+            
+
+        &::before 
+            border-top-color: red // Make borders visible
+            border-right-color: red
+            transition:
+            width 0.25s ease-out, // Width expands first
+            height 0.25s ease-out 0.25s; // And then height
+        
+
+        &::after 
+            border-bottom-color: #EE2852; // Make borders visible
+            border-left-color: #EE2852;
+            transition:
+            border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+            width 0.25s ease-out 0.5s, // And then exanding width
+            height 0.25s ease-out 0.75s; // And finally height
+    &:before,
+    &:after 
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+        
+    &::before 
+        top: 0;
+        left: 0;
+    
+
+  // And this the bottom & left borders (expands left, then up)
+    &::after 
+        bottom: 0;
+        right: 0;
+   
+  
+
+.button__programm__link-active
+    &.button__programm__link
+        &::before,
+        &::after 
+            width: 100%;
+            height: 100%;
+            
+
+        &::before 
+            border-top-color: red // Make borders visible
+            border-right-color: red
+            transition:
+            width 0.25s ease-out, // Width expands first
+            height 0.25s ease-out 0.25s; // And then height
+        
+
+        &::after 
+            border-bottom-color: #EE2852; // Make borders visible
+            border-left-color: #EE2852;
+            transition:
+            border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+            width 0.25s ease-out 0.5s, // And then exanding width
+            height 0.25s ease-out 0.75s; // And finally height
+
+.header__button__buy-ticket
+    margin 0 40px
+    +adapt(620px)
+        margin 20px 0
+.button__buy-ticket
+    width 230px
+    height 40px
+.menu-js
+    position relative
+.submenu-list
+    position absolute
+    display none
+    top 85px
+    border-left 2px solid red
+    border-right 2px solid red
+    z-index 10
+    width 100px
+    padding 10px 0
+    background-color white
+.submenu-item
+    text-align center
+    margin-top 5px
+.submenu-link
+    font()
+    tran()
+    &:hover
+        color red

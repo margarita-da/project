@@ -1,0 +1,18 @@
+.tabs-container
+    .dbd20-tabs__options
+        .dbd20-tabs__options-btn
+            a(href="#").button__textual-programm__link Текстовая программа
+        .dbd20-tabs__options-social
+            .sity2020-share
+                script(src="//yastatic.net/share2/share.js")
+                .sity2020-share__btns.ya-share2(data-services="vkontakte,facebook,telegram" data-counter="")
+    .dbd20-tabs
+        .dbd20-tabs__index
+            -for(let i =1;i<=6;i++){
+
+                if i ==1
+                    a(href=`#zal-${i}`).dbd20-tabs__index-item.dbd20-tabs__index-item_active Поток !{i}
+                else
+                    a(href=`#zal-${i}`).dbd20-tabs__index-item Поток !{i}
+            -}
+        

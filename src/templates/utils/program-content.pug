@@ -1,0 +1,62 @@
+mixin program(y)
+  .dbd20-program
+    .dbd20-program__item
+        .dbd20-program__item-wr
+            .dbd20-program__time !{y}0:00
+            .dbd20-program__descr
+                h4 Официальное открытие
+            .tags__content__wishlist
+                a(href="#" data-id=`${y}2`).recommendations__second__data__wishlist.wishlist
+                    svg.recommendations__second__star-img
+                        use(xlink:href="assets/sprite/sprite.svg#star")
+    -for(let x=0; x<5;x++){
+        .dbd20-program__item
+            .dbd20-program__item-wr
+                .dbd20-program__time !{x}0:10
+                .dbd20-program__descr
+                    h4 Пленарное заседание
+                    p Флагманская сессия даст старт обсуждению глобальных процессов в российском Digital. Топ-менеджеры и эксперты ведущих технологических и исследовательских компаний, рекламных сетевых групп, медиаоператоров и крупнейших рекламодателей не только представят актуальные данные первого квартала 2019 года, дадут оценку прошлому рекламному году, но и презентуют
+                    button.dbd20-program__show-full(type="button")
+                    button.dbd20-program__show-full-btn(type="button")
+                        img(src="assets/images/program/arrow-button.png", alt="")
+                        | Развернуть
+                .tags__content__wishlist
+                    a(href="#" data-id=`${x}1`).recommendations__second__data__wishlist.wishlist
+                        svg.recommendations__second__star-img
+                            use(xlink:href="assets/sprite/sprite.svg#star")
+            .dbd20-program__full
+                .dbd20-program__inside-text Представители телеканалов, измерителя, крупных рекламодателей обсудят темы, которые сегодня волнуют их коллег во всем мире: нужна ли рынку единая валюта, целесообразно ли выделять digital-маркетинг в структуре маркетинговых коммуникаций, и другие актуальные вопросы медиарекламной индустрии
+                .dbd20-program__speakers.dbd20-program-speakers.js-speakers
+                    -for(let i = 0; i<7;i++){
+                        .dbd20-program-speakers__item
+                            .dbd20-program-speakers__card
+                                .dbd20-program-speakers__card-photo
+                                    img(src="assets/images/program/pic.png")
+                                .dbd20-program-speakers__card-who
+                                    .dbd20-program-speakers__card-name Ирина Пустовит
+                                    .dbd20-program-speakers__card-company AdIndex
+                                .dbd20-program-speakers__card-hover
+                                    .dbd20-program-speakers__card-name Ирина Пустовит
+                                    .dbd20-program-speakers__card-position Заместитель генерального директора по развитию бизнеса Mediascope
+                    -}
+                    .dbd20-program-speakers__item
+                        .dbd20-program-speakers__card.dbd20-program-notfull-program
+                            .dbd20-program-notfull-program__text Программа 
+                                br 
+                                |дополняется
+                .dbd20-program-speakers__button-wr
+                    button.dbd20-program-speakers__button 
+                        img(src="assets/images/program/arrow-button.png", alt="")
+                        | Свернуть
+                        
+                             
+    -}
+        //- .dbd20-program__item
+        //-     .dbd20-program__item-wr
+        //-         .dbd20-program__time !{y}0:00
+        //-         .dbd20-program__descr
+        //-             h4 Официальное открытие
+        //-         .tags__content__wishlist
+        //-             a(href="#" data-id="50").recommendations__second__data__wishlist.wishlist
+        //-                 svg.recommendations__second__star-img
+        //-                     use(xlink:href="assets/sprite/sprite.svg#star")

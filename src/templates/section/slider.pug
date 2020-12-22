@@ -1,0 +1,27 @@
+section.section#about
+    .container.container__advertising
+        a.button.button__white.tags__content__btn.calendar(href="https://calendar.yandex.ru/export/ics.xml?private_token=e88fd490da791c4386c6495d8873a0a627ce171a&tz_id=Europe/Moscow") Добавить в календарь
+        .slider-wrapper
+            .swiper-container.swiper-top
+                .slider__list.swiper-wrapper
+                    -for (var i=0; i<6; i++) {
+                        .slider__item.swiper-slide
+                            .slider-img_wrap
+                                img.slider__img(src="http://placehold.it/770x440" )
+                        
+                    -}
+                .swiper-button-wr
+                    .swiper-button-next
+                    .swiper-button-prev
+        .slider-wrapper
+            .swiper-container.swiper-bottom
+                .slider__list.swiper-wrapper
+                    -for (var i=0; i<6; i++) {          
+                        .advertising-wrap.swiper-slide
+                            .block-title.advertising-title
+                                .h2__title Реклама, в которой возможно все
+                            .advertising__description
+                                .advertising__description-text На один день территория города превратится в Advertising Imaginarium — воображаемый рекламный мир, где достигаются фантастические KPI, бюджеты растут прямо на деревьях, а самые неожиданные рекламные коллаборации становятся реальностью. В Advertising Imaginarium ТВ и YouTube не конкурируют друг с другом, «наружка» не обходится без персонализированного key visual, печатная пресса уже давно напоминает газету «Ежедневный пророк» из «Гарри Поттера», а в TikTok каждый день проводится танцевальное реалити-шоу.
+                    - }
+        .advertising__button-wr
+            a(href="spickers.html").button.button__white.advertising__button Наши спикеры

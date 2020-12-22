@@ -1,0 +1,64 @@
+.popup-form
+    button.dbd20-cta__close-btn(type="button")
+    .popup-reg__content-info
+        .popup-reg__content-info__shrt-txt Моя программа
+        .popup-reg__content-info__descr.descr__color-red Информация о том что добавление в программу не является регистрацией и т.д.
+        .popup-reg__content-info__descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        button.button.button__white.popup-reg-info__btn.form-next(data-next="#form-auth") Авторизация
+        button.button.button__dark.popup-reg-info__btn.form-next(data-next="#form-reg") Регистрация
+            span
+    .popup-auth#form-auth
+        .popup-reg__content-info__shrt-txt Авторизация
+        form.form.form-auth
+            label.label
+                .form__txt
+                input(type="email" name="authEmail" class="input" placeholder="E-mail")
+                
+            label.label
+                .form__txt
+                input(type="password" name="authPassword" class="input" placeholder="Пароль")
+                
+            button(data-btn="auth").button.button__dark.popup-reg-info__btn Войти
+                span
+        a(href="#" data-next="#form-forgot").form-next.forgot__link Забыли пароль?
+    .popup-forgot#form-forgot
+        .popup-reg__content-info__shrt-txt Забыли пароль?
+        form.form.form-forgot
+            label.label
+                .form__txt
+                input(type="email" name="email" class="input" placeholder="E-mail")
+                
+            button(data-btn="forgot").button.button__dark.popup-reg-info__btn Отправить
+                span
+    .popup-reg#form-reg
+        .popup-reg__content-info__shrt-txt Регистрация
+        form.form.form-reg
+            label.label
+                .form__txt
+                input(type="text" class="input"   name="firstname" placeholder="Имя").reg__label-firstname
+            label.label
+                .form__txt
+                input(type="text" class="input"  name="lastname" placeholder="Фамилия").reg__label-lastname
+            label.label(for="phone")
+                .form__txt
+                input(type="tel" class="input tel" name="phone" placeholder="+7(9__)___-____").reg__label-phone
+            label.label
+                .form__txt
+                input(type="text" class="input" name="company" placeholder="Название компании").reg__label-company
+            label.label
+                .form__txt
+                input(type="text" class="input" name="position" placeholder="Должность").reg__label-position
+            label.label
+                .form__txt
+                input(type="email" class="input" name="email" placeholder="E-mail").reg__label-email
+            label.label
+                .form__txt
+                input(type="password" class="input" name="pass" placeholder="Пароль").reg__label-pass
+            label.label.label-confirm
+                input(type="checkbox" name="consent" placeholder="")
+                .psevdocheck
+                .form__txt Даю свое согласие на 
+                    a(href="") обработку моих персональных данных
+            button(data-btn="reg").button.button__dark.popup-reg-info__btn Зарегистрироваться
+                span
+

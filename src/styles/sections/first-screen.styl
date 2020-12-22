@@ -1,0 +1,229 @@
+.section__first-screen
+  position relative
+  height auto
+
+.section__in
+  display flex
+  flex-direction column
+  height 100%
+  // min-height 100vh
+  padding-top 0
+  // padding-bottom 80px
+  +adapt(992px)
+    display none
+    text-align center
+
+
+
+
+.first
+  background url(../images/bg.jpg) 0 0 / auto 100% no-repeat
+  min-height 1px
+  animation bg 60s infinite linear
+  +adapt(992px)
+    position relative
+    min-height 480px
+    background none
+    animation none
+  .tags__content__btn
+    display block
+    margin 0 auto 30px
+    padding 10px 0
+    text-align center
+    +adapt(550px)
+      width 250px
+
+
+
+.first__logo
+  margin-bottom 40px
+  text-align center
+  transform translateY(0)
+  transition transform 0.3s ease-in
+
+  &_hide 
+    transform translateY(-140%)
+    transition transform 0.3s ease-out
+
+.first__logo-img
+  animation poster 3s infinite ease
+  max-width 100%
+  +adapt(1598px)
+    max-width 300px
+  +adapt(1400px)
+    width 280px
+
+.first__img
+  display none
+  overflow-x scroll
+  height 480px
+  +adapt(992px)
+    display block
+  +adapt(480px)
+    display none
+  img 
+    width auto
+    max-height 100%
+    max-width 500000px
+  &:after 
+    content ''
+    position absolute
+    top 20px
+    left 20px
+    width 50px
+    height 50px
+    background url(../images/swipe.png) 0 0 / 100% 100% no-repeat
+
+.first__img__mob
+  display none 
+  +adapt(480px)
+    display block
+    overflow-x scroll
+    height 480px
+    img 
+      width auto
+      max-height 100%
+      max-width 500000px
+  &:after 
+    content ''
+    position absolute
+    top 20px
+    left 20px
+    width 50px
+    height 50px
+    background url(../images/swipe.png) 0 0 / 100% 100% no-repeat
+.first-screen__pic
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  z-index 10
+.first-screen__close-img
+  // position absolute
+  // top 0
+  // right -10px
+  cursor pointer
+  tran(all, 0.7s)
+  &:hover
+      transform rotate(360deg)
+.first-screen__pic-wr
+  width 100%
+  height 1000px
+  // position absolute
+  position relative
+  // background-color rgba(#000405, 0.8)
+  z-index 10
+  top 0
+  left 0
+.first-screen__pic
+  display flex
+  justify-content center
+  flex-wrap wrap
+  // margin 50px
+.first-screen-wrap
+  position relative
+  +adapt(768px)
+    display none
+
+
+.item
+  width 25%
+  display inline-block
+  perspective 1000px
+  transform scale(0.88)
+  
+  color #444
+  
+  &-box
+    position relative
+    display block
+    width 100%
+    height 250px
+    transform-style preserve-3d
+    transition .5s ease-in-out
+    
+    font-size: 20px
+    text-transform: uppercase
+  
+    &:hover
+      transform rotateX(90deg)
+
+    &__front
+      absolute()
+      transform translate3d(0, 0, 125px)
+      background #ffffff
+      border 1px solid #ccc
+      height 100%
+    &__bottom
+      absolute()
+      transform rotateX(-90deg) translate3d(0, 0, 125px)
+      background-color #2C3DA7
+      color #fff
+      height 100%
+
+.first-screen__footer
+  height 120px
+  // border 1px solid gray
+  display flex
+  align-items center
+  justify-content center
+  +adapt(992px)
+    height 40px
+  .sity2020-share__btns
+    text-align center
+
+
+
+
+@keyframes poster 
+  0% 
+    transform perspective(50em) rotateX(-1deg)
+    transform-origin 50% 0
+  
+  50% 
+    transform perspective(50em) rotateX(1deg)
+    transform-origin 25% 25%
+  
+  100% 
+    transform perspective(50em) rotateX(-1deg)
+    transform-origin 50% 0
+
+ 
+@keyframes bg 
+  0% 
+    background-position 0 50%
+  
+  50% 
+    background-position 100% 50%
+  
+  100% 
+    background-position 0% 50%
+
+.first__scroll
+  
+  
+.scroll
+  display block
+  width 300px
+  height 50px
+  background-color #ee2852 !important
+  text-decoration none
+  font-size 18px
+  line-height 49px
+  text-align center
+  vertical-align middle
+  text-decoration none
+  &:hover
+    background-color #ee2852 !important
+  +adapt(992px)
+    display none !important
+
+.first__scroll
+  margin 0 auto
+.section__btn
+  display flex
+  flex-direction column
+  text-align center
+  padding 40px 20px 20px
+
+

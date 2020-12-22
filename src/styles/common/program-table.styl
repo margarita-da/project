@@ -1,0 +1,283 @@
+.dbd20-program__item
+    margin-top 40px
+.dbd20-program__item-wr
+    display flex
+    align-items flex-start
+    justify-content space-between
+    +adapt(768px)
+        flex-wrap wrap    
+.dbd20-program__item
+    .tags__content__wishlist
+        width 25px
+        +adapt(768px)
+            order 2
+            width 50%
+.dbd20-program__time 
+    padding  0 10px 0 
+    font(RB, dark, 20px)
+    line-height  1.2 
+    +adapt(768px)
+        order 1
+        width 50%
+        padding 0
+
+.dbd20-program__descr 
+    position  relative 
+    padding  0 15px 0
+    display flex
+    flex-direction column
+    justify-content center
+    align-items flex
+    cursor pointer
+    +adapt(768px)
+        order 3
+        width 100%
+        padding 0
+    +adaptmin(768px)  
+        width  80% 
+        min-width  80% 
+        flex  0 0 80% 
+    h3 
+        margin  0 
+        font(RB, dark, 24px)
+
+        +adaptmin(768px)
+            font-size  40px 
+        
+    
+
+    h4 
+        margin  0 
+        padding-right  30px 
+         
+        font-size  20px 
+        font-weight  700 
+        font-family RB 
+        +adaptmin(768px)
+            font-size  24px 
+        
+    
+
+    p 
+        margin-top  15px 
+        margin-bottom  0 
+        font(RR, #707070, 16px)
+        
+.dbd20-program__show-full-btn
+    margin-top 10px
+    padding 0
+    display flex
+    align-items center
+    cursor pointer
+    img 
+        margin-right 5px
+        display block
+        width 20px
+    +adapt(768px)
+        left 0
+
+.dbd20-program__descr__show-full 
+    width 850px
+    position  absolute 
+    top  5px 
+    right  15px
+    width  0 
+    height  0 
+    padding  0 
+    background-color  transparent 
+    cursor  pointer 
+    
+    +adaptmin(768px) 
+        top  35px 
+        right  30px 
+    .dbd20-program__item_active  
+        border-top  none 
+        border-bottom  18px solid #FF6A00 
+        
+  
+
+.dbd20-program__full 
+    display  flex
+    flex-direction column
+    align-items flex-start
+    // margin-left 142px
+    margin-top 10px
+    width  100%
+    // min-width  850px
+    
+    flex  0 0 100% 
+    position relative
+    
+
+    .dbd20-program__item_active 
+        display  block
+
+.dbd20-program-speakers 
+    margin-top 20px
+    width 100%
+    overflow  hidden 
+    // margin-right  -5px 
+    display  flex
+    flex-wrap  wrap
+    justify-content center
+    // +adaptmin(576px)
+    //     justify-content start
+    
+
+.dbd20-program-speakers__item 
+    overflow  hidden 
+    padding-right  5px 
+    padding-left  5px 
+    margin-bottom  10px 
+    width 240px
+    // +adaptmin(576px)
+    //     width  50% 
+    //     min-width  50% 
+    //     flex  0 0 50% 
+    
+
+    // +adaptmin(992px)
+    //     width  25% 
+    //     min-width 25% 
+    //     flex  0 0 25% 
+        
+    
+
+.dbd20-program-speakers__card 
+    position  relative 
+    min-height  100%
+    border  1px solid #ECEDF2 
+    // padding  15px
+    font(RB, dark, 16px)
+    transition  border-color 0.5s ease 
+    cursor pointer
+    +adaptmin(576px)
+        display  flex 
+        align-items  center 
+        height  auto 
+        flex-direction column
+        padding  0 
+    &:hover
+        .dbd20-program-speakers__card-hover
+            opacity 1 
+
+.dbd20-program-speakers__card-company
+    width 100%
+    text-align center
+    font(RR, red, 16px)
+   
+
+.dbd20-program-speakers__card-photo
+    width  100%
+    margin-bottom  15px 
+    transition  opacity 0.5s ease
+    filter  grayscale(100%) 
+    img
+        display block
+        width 100%
+        height auto
+    +adaptmin(576px)
+        width  100% 
+        min-width  100% 
+        // flex  0 0 100% 
+        margin-bottom  0 
+        
+.dbd20-program__inside-text
+    margin-bottom  15px 
+    font(RR, #707070, 16px)
+.dbd20-program-speakers__card-who
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    transition  opacity 0.5s ease 
+     
+
+    +adaptmin(576px)
+        min-width  70% 
+        flex  0 0 70% 
+        padding  20px  
+        background  none 
+        
+      
+
+.dbd20-program-speakers__card-name 
+    width 100%
+    text-align center
+    margin-bottom  5px 
+    +adaptmin(576px)
+        font(RB, dark, 16px)
+
+    .dbd20-program-speakers__card-hover 
+        +adaptmin(576px)
+            // display  none 
+.dbd20-program-speakers__card-hover 
+    opacity  0 
+    position  absolute 
+    top  0 
+    left  0 
+    display  flex 
+    align-items  center 
+    justify-content  center 
+    flex-wrap  wrap 
+    flex-direction  column 
+    z-index  1 
+    background-color  #fff 
+    transition  opacity 0.5s ease 
+    width  100% 
+    height  100%  
+    text-align  center 
+    .dbd20-program-speakers__card-name
+        font(RB, dark, 16px)
+    .dbd20-program-speakers__card-position
+        font(RR, #707070, 12px)
+    .dbd20-program-speakers__card_hover 
+        opacity 1
+
+    
+
+    .slick-list 
+        overflow  visible 
+
+.dbd20-program-notfull-program
+    // width 100%
+    width 270px
+    display flex
+    justify-content center
+    align-items center
+    +adapt(577px)
+        height 278.11px
+.dbd20-program-speakers__button-wr
+    width 100%
+    text-align center
+    margin-top 10px
+
+.dbd20-program-speakers__button
+    font(RR,dark,16px)
+    cursor pointer
+    display inline-flex
+    align-items center
+    img 
+        margin-right 5px
+        display block
+        width 20px
+        transform rotate(180deg)
+
+.programm-arrow-active
+    .dbd20-program__show-full
+        transform: rotate(180deg)
+.dbd20-program__show-full
+    tran()
+    position: absolute;
+    top: 0
+    right: 0
+    padding: 0;
+    border-top: 18px solid green;
+    border-bottom: none;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    z-index 0
+    +adapt(768px)
+        display none

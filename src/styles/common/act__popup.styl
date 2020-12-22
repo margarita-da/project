@@ -1,0 +1,65 @@
+.dbd20
+    max-width 1920px
+    // min-height 100%
+    margin-right auto
+    margin-left auto
+    color #000
+.dbd20-cta 
+    display block
+    position fixed
+    bottom -150px
+    left 0
+    width 100%
+    z-index 150
+    opacity 0
+    transition bottom .2s cubic-bezier(0.23, 1, 0.32, 1)
+    +adapt(992px)
+        display none
+    &_active
+        bottom 30px
+        opacity 1
+
+    .dbd20-cta__in 
+        position relative
+        display flex
+        align-items center
+        justify-content space-around
+        max-width 1000px
+        margin-right auto
+        margin-left auto
+        padding 10px 50px
+        border-radius 3px
+        border 1px solid dark
+        background white
+        z-index 100
+        // box-shadow 0 13px 36px rgba(#FF6A00, 0.12)
+    .dbd20-cta__text
+        display flex
+        font-size 34px
+        font-weight 700
+        font-family 'Rubik', sans-serif
+
+    .dbd20-cta__close 
+        position absolute
+        top 10px
+        right 10px
+        border 0
+        padding 0
+        width 24px
+        height 24px
+        background url(../images/close.svg) 50% 50% no-repeat transparent
+        cursor pointer
+
+
+.dbd20-color-blue 
+    text-align center
+    color dark !important
+.act__buttons
+    flex()
+.fizlico,
+.urlico
+    flex()
+    width 300px
+    height 50px 
+.fizlico
+    margin-right 15px

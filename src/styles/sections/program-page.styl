@@ -1,0 +1,111 @@
+.dbd20-program-header
+    max-width 1650px
+    margin-right auto
+    margin-left auto
+    padding 30px 15px
+
+    +adaptmin(768px)
+        padding 85px 15px
+        display flex
+
+    &__logo
+        display block
+        margin-bottom 30px
+        text-align center
+
+        +adaptmin(768px)
+            min-width 292px
+            flex 0 0 292px
+            margin-bottom 0
+
+    &__text
+        padding-left 30px
+        font-family 'RR', sans-serif
+
+        +adaptmin(1200px)
+            padding-left 230px
+
+        h1
+            color #00054D
+            font-size 18px
+            font-weight 700
+
+        p, ul
+            color #707070
+            margin-bottom 1.5em
+            font-size 16px
+            line-height 1.5
+
+        b, strong
+            font-weight 700
+
+
+.dbd20-program-download
+    display inline-block
+    min-height 16px
+    padding-left 28px
+    background url(../img/download.svg) 0 50% no-repeat
+    color #FF6A00
+
+    &:hover
+        color #FF6A00
+        text-decoration underline
+
+
+.dbd20-program-container
+    max-width 1810px
+    margin-right auto
+    margin-left auto
+
+
+.dbd20-program-table-wrapper
+    width 100%
+    margin-right auto
+    margin-left auto
+    overflow-x auto
+    -webkit-overflow-scrolling touch
+
+
+.dbd20-program-table
+    width 100%
+    min-width 1080px
+    table-layout fixed
+
+    th,
+    td
+        width 25%
+        vertical-align top
+        border 1px solid #ECEDF2
+        padding 15px
+
+        +adaptmin(768px)
+            padding 30px
+
+        &:first-child
+            width 115px
+
+    h4,
+    th
+        color #00054D
+        font-size 16px
+        font-weight 700
+        font-family 'RR', sans-serif
+
+        +adaptmin(768px)
+            font-size 18px
+
+    td
+        font-size 14px
+
+        +adaptmin(768px)
+            font-size 16px
+
+    h4
+        margin 0
+
+    p
+        margin-top 20px
+        color #707070
+
+        +adaptmin(768px)
+            margin-top 40px

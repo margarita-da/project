@@ -1,0 +1,130 @@
+.recommendations
+    margin-top 60px
+    +adapt(1200px)
+        margin-top 40px
+.recommendations-wr
+    display flex
+    border-top 1px solid #F3F6F8
+    border-bottom 1px solid #F3F6F8
+    +adapt(1200px)
+        display block
+.recommendations__first
+    width 50%
+    padding 20px
+    border-right 1px solid #F3F6F8
+    +adapt(1200px)
+        width 100%
+        border-right none
+.recommendations__first__data__date,
+.recommendations__second__data__date
+    font(RR, dark, 24px)
+    +adapt(992px)
+        font-size 18px
+.recommendations__first__title
+    margin-top 10px
+    .h2__title
+        text-align left
+        font-size 32px
+        +adapt(480px)
+            font-size 24px
+.recommendations__first__descr
+    margin-top 10px
+    padding-right 20px
+    font()
+.recommendations__first__pic
+    display block
+    margin-top 20px
+    width 80%
+    +adapt(768px)
+        width 100%
+.recommendations__first__img
+    display block
+    width 100% 
+.recommendations__second
+    width 50%
+    display flex
+    flex-wrap wrap
+    +adapt(1200px)
+        width 100%
+        border-top 1px solid #F3F6F8
+        margin-top 20px
+.recommendations__second-wrap
+    width 50%
+    padding 20px
+    &:nth-child(1)
+        border-right 1px solid #F3F6F8
+        border-bottom: 1px solid #F3F6F8
+    &:nth-child(2)
+        border-bottom: 1px solid #F3F6F8
+    &:nth-child(3)
+        border-right 1px solid #F3F6F8
+    +adapt(600px)
+        width 100%
+        &:nth-child(1)
+            border-right none
+            border-bottom: none
+        &:nth-child(2)
+            border-bottom: none
+        &:nth-child(3)
+            border-right none
+.recommendations__first__data,
+.recommendations__second__data
+    display flex
+    justify-content space-between 
+.recommendations__first__more
+    display inline-flex
+    cursor pointer
+    margin-top 20px
+    border-bottom 2px solid dark
+    
+    &:hover
+        border-bottom 2px solid red
+        .recommendations__first__more__txt
+            color dark
+        .recommendations__first__more__pic
+            transform translate3d(5px,5px,5px)
+.recommendations__first__more__txt
+    margin-right 10px
+    font(RB, red, 18px)
+    tran()
+.recommendations__first__more__pic
+    tran()
+.recommendations__second__descr
+    font(RB, dark, 16px)
+    margin-top 10px
+.recommendations__second__pic
+    margin-top 20px
+    display flex
+    align-items flex-end
+.recommendations__second__wr-img
+    width 80%
+.recommendations__second__img
+    display block
+    width 100%
+.recommendations__second__more__pic
+    display flex
+    justify-content flex-end
+    margin-top 20px
+.recommendations__second__more__img
+    cursor pointer
+    tran()
+    &:hover
+        transform translate3d(5px,5px,5px)
+.recommendations__first__star-img,
+.recommendations__second__star-img
+    width 24px 
+    height 24px
+    use
+        width 24px 
+        height 24px
+        fill #b7b7b7
+    &:hover
+        box-shadow: 0 0 0 1em transparent;
+        animation: pulse 1s;
+        border-radius 50%
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 red;
+  }
+}
+

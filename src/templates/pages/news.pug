@@ -1,0 +1,35 @@
+extends ../template
+
+block variables
+    - var title = "Новости"
+
+block content
+    include ../includes/header.pug
+    .container.container__news
+        .news-wr
+            .news-inside__back
+                a.news-inside__back__button(href="index.html")
+                    img(src="assets/images/news-inside/arrowback.png", alt="back")
+                    span.news-inside__back-txt На главную
+            .sity2020-share
+                .sity2020-share__btns.ya-share2(data-services="vkontakte,facebook,telegram" data-counter="")
+        .block__title.block-title-news
+            .h2__title Новости города
+        
+        .news__list-wr
+            .news__list
+                - for (let i=0; i<14; i++) {
+                    a(href="news-inside.html").news__item
+                        .news__title Кто и о чем будет говорить на adindex city conference 2019 — программа конференции
+                        .news__description 21 мая AdIndex City Conference по традиции соберет главных героев рекламного рынка, чтобы разобрать и обсудить все самое важное, что происходит и будет происходить в российской индустрии рекламы
+                -}
+            .news-inside__back.news-inside__back-down
+                a.news-inside__back__button(href="index.html")
+                    img(src="assets/images/news-inside/arrowback.png", alt="back")
+                    span.news-inside__back-txt На главную
+    include ../common/btnUp.pug
+    //- include ../common/popup-reg.pug
+    include ../common/act__popup.pug
+    include ../common/right-menu.pug
+    //- include ../common/result-form.pug
+    script(src="//yastatic.net/share2/share.js")

@@ -1,0 +1,57 @@
+extends ../template
+
+block variables
+    - var title = "Моя программа"
+block content
+    include ../includes/header.pug
+    .container.container__personal-area
+        .news-inside__back
+            a.news-inside__back__button(href="index.html")
+                img(src="assets/images/news-inside/arrowback.png", alt="back")
+                span.news-inside__back-txt На главную
+        .personal-area-wr
+            .block__title
+                .h2__title Моя программа
+                .personal-area__description-title Информация о том что добавление в программу не является регистрацией и т.д.
+                .personal-area__description-txt Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                .links__personal-area
+                    a(href="#").personal-area__more
+                        .personal-area__more__txt Смотреть трансляцию
+                        .personal-area__more__pic
+                            img.personal-area__more__img(src="assets/images/rec_arrow.png")
+                    a(href="#").personal-area__more
+                        .personal-area__more__txt Смотреть всю программу
+                        .personal-area__more__pic
+                            img.personal-area__more__img(src="assets/images/rec_arrow.png")
+                    a(href="#").personal-area__more
+                        .personal-area__more__txt Весь контент
+                        .personal-area__more__pic
+                            img.personal-area__more__img(src="assets/images/rec_arrow.png")
+
+            //- .personal-area__name 
+        .personal-area__program-list
+            -for (let i=0; i<0; i++) {
+                .personal-area__program-item
+                    .personal-area__program__time 10:30
+                    a.personal-area__program__link(href="#")
+                        .personal-area__program__place ЗАЛ 1  |  ROCKFELLER’S HALL  |  LOFT2
+                        .personal-area__program__title Пленарное заседание
+                        .personal-area__program__descr Рекламный рынок сегодня: аналитика и прогнозы
+                    .personal-area__program__del-wr
+                        a.personal-area__program__del(href="#" data-id="")
+                            svg.personal-area__program__del-img
+                                use(xlink:href="assets/sprite/sprite.svg#delete")
+                            //- img.personal-area__program__del-img(src="assets/images/personal-area/del.png", alt="delete")
+            -}
+    .container
+        .news-inside__back.news-inside__back__down
+            a.news-inside__back__button(href="index.html")
+                img(src="assets/images/news-inside/arrowback.png", alt="back")
+                span.news-inside__back-txt На главную
+
+
+    include ../common/btnUp.pug
+    include ../common/act__popup.pug
+    //- include ../common/popup-reg.pug
+    include ../common/right-menu.pug
+    //- include ../common/result-form.pug

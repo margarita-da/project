@@ -1,0 +1,32 @@
+.recommendations-wr
+    .recommendations__first.popup-js(data-id="1")
+        .recommendations__first-wrap
+            .recommendations__first__data
+                .recommendations__first__data__date 22:10
+                a(href="#" data-id="1").recommendations__first__data__wishlist.wishlist
+                     svg.recommendations__second__star-img
+                        use(xlink:href="assets/sprite/sprite.svg#star")
+            a(href="").recommendations__first__title
+                h2.h2__title AdIndex Cinema
+            .recommendations__first__descr Эксперты представят детальный анализ перспектив классического OOH и digital, роли форматов для брендов, аудиторные данные нового поколения, а также подискутируют о programmatic ООН, векторах развития всего сегмента наружной рекламы, об актуальных потребностях компаний-рекламодателей и о многом другом.
+            a(href="").recommendations__first__pic
+                img(src="assets/images/recommendations/gettyImages.png").recommendations__first__img
+            a(href="").recommendations__first__more
+                .recommendations__first__more__txt Подробнее
+                .recommendations__first__more__pic
+                    img.recommendations__first__more__img(src="assets/images/rec_arrow.png")
+    .recommendations__second.data-content
+        -for(let i=3; i<7;i++){
+            .recommendations__second-wrap.popup-js(data-id=`${i}`)
+                .recommendations__second__data
+                    .recommendations__second__data__date 22:10
+                    a(href="#" data-id=`${i}`).recommendations__second__data__wishlist.wishlist
+                        svg.recommendations__second__star-img
+                            use(xlink:href="assets/sprite/sprite.svg#star")
+                a(href="#popup-pr").recommendations__second__descr Может ли реклама влиять на здоровье? И не пора ли самой рекламе пройти медицинский чекап?
+                a(href="#popup-pr").recommendations__second__pic
+                    .recommendations__second__wr-img
+                        img(src="assets/images/recommendations/gettyImages.png").recommendations__second__img
+                    a(href="#popup-pr").recommendations__second__more__pic
+                        img.recommendations__second__more__img(src="assets/images/rec_arrow.png")
+        -}

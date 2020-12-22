@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+    - var title = "Программа"
+
+block content
+    include ../includes/header.pug
+    section.section.program-section
+        .container
+            .news-inside__back
+                a.news-inside__back__button(href="index.html")
+                    img(src="assets/images/news-inside/arrowback.png", alt="back")
+                    span.news-inside__back-txt На главную
+
+
+            .dbd20-section__in
+                .block__title
+                    .h2__title Программа
+                    .block__title__descr Деловой блок конференции будет состоять из пяти параллельных потоков в формате выступлений, дискуссий и ток-шоу, посвященных самым актуальным рекламным направлениям и темам
+                include ../common/program-tabs.pug
+                include ../utils/program-content.pug
+                .programm__content
+                    -for(let y=1;y<=4;y++){ 
+                        .dbd20-tabs__tab( id=`zal-${y}`)
+                            +program(y)
+                    -}   
+    include ../section/recommendations.pug
+    .container
+        .news-inside__back.news-inside__back__down
+            a.news-inside__back__button(href="index.html")
+                img(src="assets/images/news-inside/arrowback.png", alt="back")
+                span.news-inside__back-txt На главную
+    include ../common/btnUp.pug
+    //- include ../common/popup-reg.pug
+    include ../common/right-menu.pug
+    include ../common/popup-program.pug
+    include ../common/act__popup.pug
+
+    //- include ../common/result-form.pug
+                    

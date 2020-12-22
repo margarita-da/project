@@ -1,0 +1,22 @@
+extends ../template
+
+block variables
+    - var title = "Главная Страница"
+
+block content
+    include ../includes/header-home.pug
+    include ../section/first-screen.pug
+    
+    include ../section/slider.pug
+    include ../section/recommendations.pug
+    include ../section/tabs.pug
+    include ../section/partners.pug
+    include ../section/contacts.pug
+    
+    include ../common/act__popup.pug
+    //- include ../common/popup-reg.pug
+    include ../common/popup-program.pug
+    include ../common/right-menu_home.pug
+    //- include ../common/result-form.pug
+    include ../common/btnUp.pug
+    script(src="//yastatic.net/share2/share.js")

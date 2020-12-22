@@ -1,0 +1,107 @@
+.section__tabs
+	padding 40px 0
+.tabs__nav-list
+	flex(false)
+	flex-wrap wrap
+	width 100%
+	.js-active
+		tran(all, 0.4s)
+		background-color green
+		color white
+		border-top 1px solid dark
+		border-right 1px solid dark
+		border-left 1px solid dark
+.tabs__nav
+	margin-top 30px
+.tabs__nav-item
+	width 50%
+	height 80px
+	background-color white
+	border-top 1px solid gray
+	border-right 1px solid gray
+	border-left 1px solid gray
+	cursor pointer
+	text-transform uppercase
+	font(RM)
+	flex(true, false)
+	padding-left 40px
+	&:first-child
+		margin-right -1px
+	+adapt(480px)
+		height 60px
+		width 100%
+.tabs__panels 
+	background-color #030a1c
+
+.container-panels
+	position relative
+	display flex
+	flex-direction column
+	justify-content center
+.tabs__panel
+	background-size cover
+	background-position center center
+	
+.block-title__tabs
+	.h2__title
+		color white
+		text-align left 
+
+.tabs__panel-content__left
+	width 65%
+	display flex
+	flex-direction column
+	justify-content center
+	min-height 600px
+	height auto
+	padding 30px 32px
+	+adapt(992px)
+		width 100%
+	+adapt(480px)
+		width 100%
+		padding 30px 16px
+
+.tabs__panel-content__list
+	margin-top 20px
+.tabs__panel-content__descr
+	font(RR, white)
+	width 520px
+	margin-top 20px
+	+adapt(768px)
+		width 100%
+
+.tabs__panel__link
+	width 270px
+	height 50px
+	background-color #f2f2f2 !important
+	margin-top 20px
+	flex()
+	font()
+	tran()
+	&:hover
+		background-color transparent!important
+		color white
+		border 1px solid white
+.tabs__panel-content__item
+	flex(false,false)
+	margin-top 5px
+.tabs__panel-content__time
+	font(RB, green, 24px)
+	margin-right 10px
+	width 80px
+.tabs__panel-content__txt
+	font(RB, green, 24px)
+	margin-right 20px
+	&:last-child
+		margin-right 0
+.tabs__panel 
+	transition: none;
+	transform: scale(.8);
+	width: 100%;
+	opacity: 0;
+	height 0
+	&.js-active 
+		transition: all .25s linear 0s;
+		transform: scale(1)
+		opacity: 1;
+		height auto

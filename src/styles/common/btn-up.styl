@@ -1,0 +1,24 @@
+.block__btn-up
+    display none
+    position fixed
+    bottom 3%
+    right 2%
+    z-index 1000
+    cursor pointer
+
+    &:hover
+        .btn__up
+            tran()
+            transform translateY(-5px)
+.btn__up
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+    width 100%
+    height 100%
+    tran()
+    +adapt(550px)
+        width 80%
+    +adapt(450px)
+        width 70%
